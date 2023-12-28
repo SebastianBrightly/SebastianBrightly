@@ -16,4 +16,5 @@ p {
 img {
     width: 40em;
     max-width: 90%;
+    text-align: left;
 }
