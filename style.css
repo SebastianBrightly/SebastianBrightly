@@ -5,6 +5,16 @@ body {
 
 }
 
+.about__wrapper,.form__cta,.form__cta__links,.link__wrapper,body,footer {
+    display: flex;
+    align-items: normal;
+    justify-content: center
+}
+
+.about__wrapper,.form__cta,.form__cta__links,.post-details__wrapper {
+    flex-direction: column
+}
+
 h1 {
     padding-top: 4em;
 }
@@ -16,5 +26,62 @@ p {
 img {
     width: 40em;
     max-width: 90%;
-    text-align: left;
+    text-align: center;
+}
+
+
+@media(max-width: 767px) {
+    .form__cta {
+        width:100%;
+        align-self: center;
+        gap: 2rem
+    }
+}
+
+
+.comments-form__wrapper {
+    position: relative;
+    z-index: 2
+}
+
+.form__wrapper {
+    margin-top: 2rem;
+    align-self: flex-end;
+    width: 100%;
+    max-width: 35rem;
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    z-index: 1
+}
+
+@media(max-width: 767px) {
+    .form__wrapper {
+        flex-direction:column;
+        padding: 0
+    }
+}
+
+.form__cta__links {
+    height: 100%;
+    gap: 1rem;
+    justify-content: flex-start
+}
+
+@media(max-width: 767px) {
+    .form__cta__links {
+        flex-direction:row;
+        height: 2rem;
+        width: 100%
+    }
+}
+
+.link__wrapper .link:after {
+    content: attr(data-link-alt);
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transition: top .3s cubic-bezier(.77,0,.175,1),transform .3s cubic-bezier(.77,0,.175,1)
 }
