@@ -1,0 +1,55 @@
+* { margin:0; padding:0; }
+
+/*Navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #015250;
+
+  }
+
+li {
+    float:left;
+  }
+
+  /* Style the top navigation bar */
+  .topnav {
+    position: sticky;
+    overflow: hidden;
+    background-color: #015250;
+  }
+
+  /* Style the topnav links */
+.topnav a {
+    position: sticky;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    position: sticky;
+    background-color: #FD7C01;
+
+    color: black;
+  }
+
+h1 {
+    text-align: center;
+    background-color: #233342;
+}
+
+html, body { width:100vw; height:100vh; } /* just to be sure these are full screen*/
+
+canvas { 
+   overflow: hidden;
+   width:100vw;
+   height:100vh;
+   background-color:black;
+}
