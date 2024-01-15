@@ -1,0 +1,15 @@
+* { margin:0; padding:0; }
+
+h1 {
+    text-align: center;
+    background-color: #233342;
+}
+
+html, body { width:100vw; height:100vh; } /* just to be sure these are full screen*/
+
+canvas { 
+   overflow: hidden;
+   width:100vw;
+   height:100vh;
+   background-color:black;
+}
