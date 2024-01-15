@@ -1,5 +1,15 @@
+/*
+Color palletes to use
+06171E
+113D3C
+015250
+FD7C01
+FD9F01
+FFB337
+*/
+
 body {
-    background-color: #233342;
+    background-color: #06171E;
     margin: 0;
 
   }
@@ -17,7 +27,7 @@ section {
     position: relative;
     background-color: lightgrey;
     width: 600px;
-    border: 15px solid #4B2B31;
+    border: 15px solid #015250;
     padding: 50px;
     margin: 20px;
     z-index: 1;
@@ -29,7 +39,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    color: #4B2B31;
+    color: #015250;
 
   }
 
@@ -53,7 +63,7 @@ li a:hover {
 .topnav {
     position: sticky;
     overflow: hidden;
-    background-color: #4B2B31;
+    background-color: #015250;
   }
 
   /* Style the topnav links */
@@ -70,7 +80,8 @@ li a:hover {
   /* Change color on hover */
   .topnav a:hover {
     position: sticky;
-    background-color: #CE8054;
+    background-color: #FD7C01;
+
     color: black;
   }
 
@@ -139,7 +150,7 @@ h1 {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: #6F3637;
+    background: #113D3C;
     animation: animate 25s linear infinite;
     bottom: -150px;
     
@@ -151,7 +162,7 @@ h1 {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: #B35340;
+    background: #FFB337;
     animation: animate 25s linear infinite;
     bottom: -150px;
     
@@ -272,6 +283,14 @@ h1 {
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
+}
+
+.circles li:nth-child(11){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 14s;
 }
 
 .square li:nth-child(7){
