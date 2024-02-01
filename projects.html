@@ -36,18 +36,23 @@
         .then(response => response.json())
         .then(repos => {
             const repoList = document.getElementById('repoList');
+                const repoCarousel = document.getElementById('repoCarousel');
 
-            // Iterate through each repository and create list items
+            // Iterate through each repository and create project blocks
             repos.forEach(repo => {
-                const listItem = document.createElement('li');
+                const repoBlock = document.createElement('div');
+                repoBlock.classList.add('repo-block');
+
                 const link = document.createElement('a');
                 link.href = repo.html_url;
                 link.textContent = repo.name;
-                listItem.appendChild(link);
-                repoList.appendChild(listItem);
+
+                repoBlock.appendChild(link);
+                repoCarousel.appendChild(repoBlock);
             });
         })
         .catch(error => console.error('Error fetching repositories:', error));
+
 </script>
   
   <div>
