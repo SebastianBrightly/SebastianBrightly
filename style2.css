@@ -59,6 +59,22 @@ canvas {
    background-color:black;
 }
 
+.carousel-container {
+            display: flex;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+        }
+        .repo-block {
+            flex: 0 0 auto;
+            width: 300px; /* Adjust the width as needed */
+            margin-right: 10px; /* Adjust the spacing between blocks */
+            scroll-snap-align: start;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
 a {
     color: #0366d6;
     text-decoration: none;
