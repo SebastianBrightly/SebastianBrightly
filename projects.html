@@ -5,15 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE-Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHub Pages Sebastian Brightly</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  
 </head>
 
 <body>
-<h1>Hello World! Thank you for visiting my site, its currently under construction projects</h1>
+  <div class="topnav">
+    <ul>
+      <li><a href="https://github.com/SebastianBrightly">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/sebastian-brightly-08431a169">Linkedin</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </div>
+
+  <h1 style="color: rgb(255, 255, 255);"> Hello World! Thank you for visiting my site, This Page "Projects" is currently under construction</h1>
+  <h1>GitHub Repositories</h1>
+
+  <ul id="repoList"></ul>
+
+<script>
+    // GitHub username
+    const username = 'sebastianbrightly';
+
+    // GitHub API URL for fetching repositories
+    const apiUrl = `https://api.github.com/users/${username}/repos`;
+
+    // Fetch repositories using GitHub API
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(repos => {
+            const repoList = document.getElementById('repoList');
+                const repoCarousel = document.getElementById('repoCarousel');
+
+            // Iterate through each repository and create project blocks
+            repos.forEach(repo => {
+                const repoBlock = document.createElement('div');
+                repoBlock.classList.add('repo-block');
+
+                const link = document.createElement('a');
+                link.href = repo.html_url;
+                link.textContent = repo.name;
+
+                repoBlock.appendChild(link);
+                repoCarousel.appendChild(repoBlock);
+            });
+        })
+        .catch(error => console.error('Error fetching repositories:', error));
+
+</script>
+  
+  <div>
+  <canvas id="test"><script src="particles.js"></script></canvas>
+</div>
 </body>
-
-<a href="https://unsplash.com/@lazycreekimages?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-<img src="https://images.unsplash.com/photo-1645395758741-c23bb12d9d6b?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-
-</a>
 </html>
