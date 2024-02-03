@@ -20,6 +20,41 @@
   </div>
 
   <h1 style="color: rgb(255, 255, 255);"> Hello World! Thank you for visiting my site, This Page "Projects" is currently under construction</h1>
+  <h1>GitHub Repositories</h1>
+
+  <ul id="repoList"></ul>
+
+<script>
+    // GitHub username
+    const username = 'sebastianbrightly';
+
+    // GitHub API URL for fetching repositories
+    const apiUrl = `https://api.github.com/users/${username}/repos`;
+
+    // Fetch repositories using GitHub API
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(repos => {
+            const repoList = document.getElementById('repoList');
+                const repoCarousel = document.getElementById('repoCarousel');
+
+            // Iterate through each repository and create project blocks
+            repos.forEach(repo => {
+                const repoBlock = document.createElement('div');
+                repoBlock.classList.add('repo-block');
+
+                const link = document.createElement('a');
+                link.href = repo.html_url;
+                link.textContent = repo.name;
+
+                repoBlock.appendChild(link);
+                repoCarousel.appendChild(repoBlock);
+            });
+        })
+        .catch(error => console.error('Error fetching repositories:', error));
+
+</script>
+  
   <div>
   <canvas id="test"><script src="particles.js"></script></canvas>
 </div>
