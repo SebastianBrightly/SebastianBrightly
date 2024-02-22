@@ -15,6 +15,7 @@ var mouse = { x: 0, y: 0 };
 canvas.setAttribute('width',w);
 canvas.setAttribute('height',h);
 
+
 function create() {
   time = 0;
   count = 0;
