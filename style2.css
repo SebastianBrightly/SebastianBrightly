@@ -57,6 +57,7 @@ canvas {
    width:100vw;
    height:100vh;
    background-color:black;
+   z-index: -1;
 }
 
 .carousel-container {
@@ -81,4 +82,10 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+
+holdcontainer {
+  width:50vw;
+  height:50vh;
+  z-index: 1;
 }
