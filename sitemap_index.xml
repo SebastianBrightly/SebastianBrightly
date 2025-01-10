@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://brightlyit.com/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>/post-sitemap.xml</loc>
+		<loc>https://brightlyit.com/post-sitemap.xml</loc>
 		<lastmod>2024-12-21T15:33:23+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/page-sitemap.xml</loc>
-		<lastmod>2025-01-10T00:21:12+00:00</lastmod>
+		<loc>https://brightlyit.com/page-sitemap.xml</loc>
+		<lastmod>2025-01-10T00:56:44+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/category-sitemap.xml</loc>
+		<loc>https://brightlyit.com/category-sitemap.xml</loc>
 		<lastmod>2024-12-21T15:33:23+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/author-sitemap.xml</loc>
+		<loc>https://brightlyit.com/author-sitemap.xml</loc>
 		<lastmod>2024-12-28T22:16:49+00:00</lastmod>
 	</sitemap>
 </sitemapindex>
