@@ -1,78 +1,57 @@
-# SebastianBrightly Website Snapshot
+# Brightly IT Static Site
 
-This repository contains a static snapshot of the SebastianBrightly website, exported from a WordPress-powered site and structured for straightforward hosting on GitHub Pages or any static web server.
+This repository now uses a quick-launch static homepage at `index.html` for immediate availability, while preserving the original WordPress export as a legacy snapshot.
 
-## Overview
+## Current Status
 
-- Static HTML pages for the main site and service pages
-- Theme assets (CSS, JavaScript, images, fonts) under `wp-content/`
-- SEO and feed artifacts (sitemaps, RSS/Atom files)
-- Preserved URL-style folder structure (for example: `services/index.html`)
+- Live entry point: `index.html` (WordPress-independent)
+- Legacy content retained: page folders plus `wp-content/` and `wp-includes/`
+- Goal: keep the site usable now, then migrate legacy pages incrementally
 
-## What This Repo Is
+## Why This Structure
 
-This project is useful as:
+- The original export depended on WordPress-generated URLs and runtime behavior
+- A lightweight static front page avoids broken rendering from missing WP backend features
+- Existing pages are still available for content reference and phased cleanup
 
-- A deployable static copy of a business website
-- A baseline for performance cleanup and modernization
-- A content/reference archive of site pages and assets
-
-## Tech Snapshot
-
-- Exported WordPress page output (HTML)
-- Corpiva theme assets
-- Frontend libraries bundled in theme/vendor files (AOS, Owl Carousel, Fancybox, etc.)
-
-## Project Structure
+## Project Layout
 
 ```text
 .
-|- index.html
-|- sitemap.xml
+|- index.html                  # quick-launch static homepage
 |- services/
-|  |- index.html
+|- contact-us/
 |- blog/
-|  |- index.html
-|- wp-content/
-|  |- themes/corpiva/
-|  |- plugins/
-|  |- uploads/
-|- wp-includes/
+|- home/                       # legacy WordPress-exported route set
+|- wp-content/                 # legacy theme, plugins, uploads
+|- wp-includes/                # legacy WordPress core assets snapshot
+|- sitemap.xml
 ```
 
 ## Run Locally
 
-Because this is a static site, you can preview it with any local web server.
+Use any static web server from the repository root.
 
-### Option 1: VS Code Live Server
+### PowerShell (Python)
 
-1. Open the repo in VS Code.
-2. Run a Live Server extension on the workspace root.
-3. Open `index.html` in the browser.
-
-### Option 2: Python HTTP Server
-
-Run from the repository root:
-
-```bash
+```powershell
 python -m http.server 8080
 ```
 
 Then open `http://localhost:8080`.
 
+## Migration Plan
+
+1. Keep `index.html` as a stable static landing page.
+2. Migrate one legacy route at a time to WordPress-independent HTML/CSS.
+3. Replace absolute production-domain links with relative paths.
+4. Remove unused legacy assets only after route verification.
+
 ## Notes
 
-- Some pages still reference original absolute URLs and WordPress endpoints.
-- Contact forms and dynamic WordPress features will not function without backend services.
-- This repository is focused on static presentation and content structure.
-
-## Suggested Next Improvements
-
-- Replace absolute production links with relative/local equivalents
-- Optimize large images and remove unused assets
-- Add a lightweight build step for minification and link checks
-- Add CI for HTML/link validation
+- Dynamic WordPress features (forms, admin AJAX, WP APIs) will not work without backend services.
+- This repository is intended for static hosting and progressive cleanup.
 
 ## License
 
-No license file is currently included. Add a license if you plan to distribute or accept external contributions.
+No license file is currently included.
