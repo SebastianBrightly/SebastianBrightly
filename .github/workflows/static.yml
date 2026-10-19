@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # The repository contains only the static profile and its documentation.
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
