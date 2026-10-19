@@ -3,373 +3,251 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Sebastian Brightly | Cloud and Automation Engineer</title>
-  <meta name="description" content="Sebastian Brightly is a cloud and automation engineer focused on reliable platforms, AI-assisted workflows, and practical systems design.">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta name="description" content="Meet Sebastian Brightly: cloud and automation engineer focused on reliable systems, enterprise operations, and practical technology.">
+  <title>Sebastian Brightly | Cloud &amp; Automation</title>
   <style>
     :root {
-      --bg: #f4efe6;
-      --bg-soft: #efe7d9;
-      --ink: #1f2a2e;
-      --ink-soft: #415258;
-      --brand: #0f5a5a;
-      --brand-2: #c96f3f;
-      --card: rgba(255, 255, 255, 0.68);
-      --border: rgba(31, 42, 46, 0.12);
-      --shadow: 0 18px 36px rgba(31, 42, 46, 0.12);
-      --radius: 16px;
-      --radius-sm: 12px;
+      color-scheme: light;
+      --paper: #f7f7f4;
+      --ink: #182522;
+      --muted: #596762;
+      --accent: #176b58;
+      --line: #dce3de;
+      --content-width: 860px;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html,
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Segoe UI", "Trebuchet MS", Tahoma, sans-serif;
+      background: var(--paper);
       color: var(--ink);
-      background:
-        radial-gradient(circle at 8% 12%, rgba(201, 111, 63, 0.18), transparent 36%),
-        radial-gradient(circle at 90% 86%, rgba(15, 90, 90, 0.14), transparent 34%),
-        linear-gradient(140deg, var(--bg) 0%, var(--bg-soft) 100%);
-      line-height: 1.55;
-      min-height: 100vh;
+      font: 16px/1.7 "Segoe UI", system-ui, sans-serif;
     }
 
-    .wrap {
-      width: min(1080px, 92%);
-      margin: 0 auto;
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .page {
+      width: min(var(--content-width), calc(100% - 48px));
+      margin-inline: auto;
     }
 
     header {
-      padding: 22px 0;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(8px);
-      background: rgba(244, 239, 230, 0.8);
-      border-bottom: 1px solid var(--border);
-      z-index: 4;
+      padding-block: 24px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .nav {
+    .header-inner,
+    nav,
+    .links {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .logo {
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--brand);
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    .nav-links {
-      display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
+      gap: 20px;
     }
 
-    .nav-links a {
+    .header-inner {
+      justify-content: space-between;
+    }
+
+    .name {
       color: var(--ink);
+      font-weight: 700;
       text-decoration: none;
-      font-weight: 600;
+    }
+
+    nav a {
+      color: var(--muted);
       font-size: 0.95rem;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      transition: 200ms ease;
+      text-decoration: none;
     }
 
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      border-color: var(--border);
-      background: rgba(255, 255, 255, 0.45);
-      outline: none;
+    main {
+      padding-block: clamp(64px, 11vw, 112px) 80px;
     }
 
-    .hero {
-      padding: 72px 0 46px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .hero-copy {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: clamp(22px, 3vw, 36px);
-      box-shadow: var(--shadow);
-      animation: rise 700ms ease both;
+    .intro {
+      max-width: 700px;
     }
 
     .eyebrow {
-      display: inline-block;
-      margin: 0 0 8px;
-      font-size: 0.78rem;
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--brand-2);
-      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    p {
+      margin-top: 0;
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(2rem, 4.4vw, 3.7rem);
-      line-height: 1.02;
-      letter-spacing: -0.02em;
+      max-width: 700px;
+      margin-bottom: 20px;
+      font-size: clamp(2.7rem, 8vw, 5.1rem);
+      letter-spacing: -0.065em;
+      line-height: 1.04;
     }
 
-    .lead {
-      margin: 18px 0 0;
-      color: var(--ink-soft);
-      max-width: 62ch;
-      font-size: clamp(1rem, 1.8vw, 1.15rem);
+    .summary {
+      max-width: 640px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: clamp(1.1rem, 2vw, 1.25rem);
     }
 
-    .actions {
-      margin-top: 26px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+    .links {
+      gap: 12px 24px;
     }
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--brand);
-      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    .links a {
+      font-weight: 650;
     }
 
-    .btn-primary {
-      color: #fff;
-      background: var(--brand);
-      box-shadow: 0 10px 18px rgba(15, 90, 90, 0.22);
+    section {
+      padding-block: 36px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 24px;
     }
 
-    .btn-secondary {
-      color: var(--brand);
-      background: transparent;
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
     }
 
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-2px);
-      outline: none;
+    section p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: var(--muted);
     }
 
-    .hero-panel {
-      background: linear-gradient(145deg, rgba(15, 90, 90, 0.92), rgba(8, 45, 45, 0.92));
-      color: #f7f2e9;
-      border-radius: var(--radius);
-      padding: clamp(20px, 2.4vw, 28px);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      animation: rise 900ms ease both;
-    }
-
-    .hero-panel h2 {
-      margin: 0;
-      font-size: 1.05rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: #f5c9b1;
-    }
-
-    .hero-panel ul {
-      margin: 16px 0 0;
-      padding: 0 0 0 18px;
-    }
-
-    .hero-panel li {
-      margin: 10px 0;
-    }
-
-    .grid {
+    .focus-list {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin: 12px 0 52px;
+      gap: 24px;
+      margin-top: 22px;
     }
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 16px;
-    }
-
-    .card h3 {
-      margin: 4px 0 10px;
-      font-size: 1.1rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.96rem;
-    }
-
-    .legacy {
-      margin: 20px 0 72px;
-      background: rgba(255, 255, 255, 0.56);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 18px;
-    }
-
-    .legacy h2 {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-    }
-
-    .legacy-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .legacy-links a {
-      color: var(--brand);
-      text-decoration: none;
-      font-weight: 700;
-      background: rgba(255, 255, 255, 0.75);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 8px 12px;
+    .focus-list p {
+      padding-top: 14px;
+      border-top: 2px solid var(--accent);
+      color: var(--ink);
+      font-weight: 600;
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 24px 0 36px;
-      color: var(--ink-soft);
-      font-size: 0.92rem;
+      padding-block: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
-    @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer p {
+      margin: 0;
     }
 
-    @media (max-width: 920px) {
-      .hero {
-        grid-template-columns: 1fr;
+    @media (max-width: 600px) {
+      .page {
+        width: min(var(--content-width), calc(100% - 36px));
       }
 
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 620px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        position: static;
-      }
-
-      .nav {
+      .header-inner {
         align-items: flex-start;
         flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        gap: 16px;
+      }
+
+      .focus-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap nav">
-      <a class="logo" href="/">Sebastian Brightly</a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="contact-us/">Contact</a>
-        <a href="blog/">Writing</a>
-        <a href="home/">Legacy Site</a>
+    <div class="page header-inner">
+      <a class="name" href="#top">Sebastian Brightly</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero" aria-labelledby="site-title">
-      <article class="hero-copy">
-        <p class="eyebrow">About Sebastian Brightly</p>
-        <h1 id="site-title">Cloud and automation engineer building practical systems people can rely on.</h1>
-        <p class="lead">
-          I love turning messy, complicated systems into tools people can actually rely on. Over the last 8+ years I have led teams and
-          enterprise operations across healthcare and technology environments where reliability, compliance, and scale genuinely matter.
-          What keeps me interested is solving problems creatively and building things that make work easier for everyone involved.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="contact-us/">Get in touch</a>
-          <a class="btn btn-secondary" href="blog/">Read my writing</a>
-        </div>
-      </article>
-
-      <aside class="hero-panel" aria-label="Current focus">
-        <h2>Current focus</h2>
-        <ul>
-          <li>Platform engineering and automation that reduce operational drag</li>
-          <li>AI-assisted workflows and knowledge systems that stay practical</li>
-          <li>Enterprise architecture and process optimization without overengineering</li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="grid" aria-label="What I build">
-      <article class="card">
-        <h3>Reliable Platforms</h3>
-        <p>I design and improve cloud foundations so teams can deliver consistently at scale.</p>
-      </article>
-      <article class="card">
-        <h3>Automation Systems</h3>
-        <p>I build automation that removes repetitive work and helps teams move faster with fewer errors.</p>
-      </article>
-      <article class="card">
-        <h3>Personal Experiments</h3>
-        <p>Outside corporate work, I prototype tools that help people organize information and create with less overhead.</p>
-      </article>
-    </section>
-
-    <section class="legacy" aria-labelledby="legacy-title">
-      <h2 id="legacy-title">From service site to personal introduction</h2>
-      <p>
-        This repository started as a service-focused WordPress export. It now serves as a personal intro while keeping selected legacy pages
-        available during the transition. If anything I have built, shared, or written has helped you, your support genuinely helps me keep
-        experimenting and shipping new ideas.
+  <main class="page" id="top">
+    <div class="intro">
+      <p class="eyebrow">Cloud · Automation · Enterprise Operations</p>
+      <h1>Making complex technology work better for people.</h1>
+      <p class="summary">
+        I’m Sebastian, a technology leader with 8+ years of experience across
+        healthcare and technology. I turn complicated systems into reliable,
+        practical tools that make work easier.
       </p>
-      <div class="legacy-links">
-        <a href="home/">Original home snapshot</a>
-        <a href="blog/">Blog</a>
-        <a href="reliable-it-support/">Legacy service page</a>
-        <a href="optimize-your-technology/">Legacy optimization page</a>
+      <div class="links" id="contact">
+        <a href="mailto:brightly.inc@gmail.com">Email me</a>
+        <a href="https://www.linkedin.com/in/sebastian-brightly-08431a169">Connect on LinkedIn</a>
+      </div>
+    </div>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">A little about me</h2>
+      <p>
+        I’ve led teams and enterprise operations in environments where
+        reliability, compliance, and scale matter. I enjoy solving problems
+        creatively and building systems that help people do their best work.
+      </p>
+    </section>
+
+    <section id="focus" aria-labelledby="focus-heading">
+      <h2 id="focus-heading">What I focus on</h2>
+      <div class="focus-list">
+        <p>Reliable cloud platforms</p>
+        <p>Useful automation</p>
+        <p>Practical systems design</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <p>Sebastian Brightly. Cloud, automation, and practical systems design. Legacy WordPress-exported content remains in this repository.</p>
+    <div class="page">
+      <p>Sebastian Brightly</p>
     </div>
   </footer>
 </body>

@@ -1,57 +1,29 @@
-# Brightly IT Static Site
+# Sebastian Brightly
 
-This repository now uses a quick-launch static homepage at `index.html` for immediate availability, while preserving the original WordPress export as a legacy snapshot.
+A lightweight personal profile and resume supplement, published as a static
+site with GitHub Pages.
 
-## Current Status
+## Site
 
-- Live entry point: `index.html` (WordPress-independent)
-- Legacy content retained: page folders plus `wp-content/` and `wp-includes/`
-- Goal: keep the site usable now, then migrate legacy pages incrementally
+The entire site is `index.html`. It uses plain HTML and CSS, with no build
+tools, external assets, or server-side dependencies.
 
-## Why This Structure
+## Preview locally
 
-- The original export depended on WordPress-generated URLs and runtime behavior
-- A lightweight static front page avoids broken rendering from missing WP backend features
-- Existing pages are still available for content reference and phased cleanup
-
-## Project Layout
-
-```text
-.
-|- index.html                  # quick-launch static homepage
-|- services/
-|- contact-us/
-|- blog/
-|- home/                       # legacy WordPress-exported route set
-|- wp-content/                 # legacy theme, plugins, uploads
-|- wp-includes/                # legacy WordPress core assets snapshot
-|- sitemap.xml
-```
-
-## Run Locally
-
-Use any static web server from the repository root.
-
-### PowerShell (Python)
+Open `index.html` in a browser, or run a local static server:
 
 ```powershell
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+Then visit <http://localhost:8080>.
 
-## Migration Plan
+## Publish
 
-1. Keep `index.html` as a stable static landing page.
-2. Migrate one legacy route at a time to WordPress-independent HTML/CSS.
-3. Replace absolute production-domain links with relative paths.
-4. Remove unused legacy assets only after route verification.
+The GitHub Actions workflow in `.github/workflows/static.yml` deploys the
+repository to GitHub Pages whenever changes are pushed to `main`. In the
+repository settings, enable Pages and select **GitHub Actions** as the build
+and deployment source.
 
-## Notes
-
-- Dynamic WordPress features (forms, admin AJAX, WP APIs) will not work without backend services.
-- This repository is intended for static hosting and progressive cleanup.
-
-## License
-
-No license file is currently included.
+Update the profile, email address, and LinkedIn URL in `index.html` to keep
+the public contact details current.
