@@ -6,7 +6,7 @@ site with GitHub Pages.
 ## Site
 
 The entire site is `index.html`. It uses plain HTML and CSS, with no build
-tools, external assets, or server-side dependencies.
+tools or server-side dependencies. Image assets are stored in `assets/`.
 
 ## Preview locally
 

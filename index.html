@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f7f4">
-  <meta name="description" content="Meet Sebastian Brightly: cloud and automation engineer focused on reliable systems, enterprise operations, and practical technology.">
+  <meta name="description" content="A personal introduction to Sebastian Brightly and his approach to cloud platforms, automation, practical problem-solving, and people-centered technology.">
   <link rel="canonical" href="https://brightlyit.com/">
-  <title>Sebastian Brightly | Cloud &amp; Automation</title>
+  <title>Sebastian Brightly | Cloud, Automation &amp; Thoughtful Engineering</title>
   <style>
     :root {
       color-scheme: light;
@@ -54,7 +54,7 @@
     }
 
     header {
-      padding-block: 24px;
+      padding-block: 20px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -84,11 +84,38 @@
     }
 
     main {
-      padding-block: clamp(64px, 11vw, 112px) 80px;
+      padding-block: clamp(56px, 9vw, 96px) 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 210px;
+      align-items: center;
+      gap: clamp(32px, 7vw, 72px);
+      padding-top: 0;
+      padding-bottom: clamp(52px, 8vw, 80px);
+      border-top: 0;
     }
 
     .intro {
-      max-width: 700px;
+      max-width: 650px;
+    }
+
+    .portrait {
+      width: 210px;
+      aspect-ratio: 1;
+      margin: 0;
+      overflow: hidden;
+      border: 2px solid var(--line);
+      border-radius: 50%;
+      background: #e7ebe7;
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .eyebrow {
@@ -107,18 +134,73 @@
     }
 
     h1 {
-      max-width: 700px;
+      max-width: 650px;
       margin-bottom: 20px;
-      font-size: clamp(2.7rem, 8vw, 5.1rem);
+      font-size: clamp(2.7rem, 7.5vw, 4.7rem);
       letter-spacing: -0.065em;
       line-height: 1.04;
     }
 
     .summary {
-      max-width: 640px;
-      margin-bottom: 28px;
+      max-width: 620px;
+      margin-bottom: 0;
       color: var(--muted);
       font-size: clamp(1.1rem, 2vw, 1.25rem);
+    }
+
+    section {
+      padding-block: 34px 38px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    section > p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    section > p + p {
+      margin-top: 14px;
+    }
+
+    .approach-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .approach-list article {
+      padding-top: 14px;
+      border-top: 2px solid var(--accent);
+    }
+
+    .approach-list h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .approach-list p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .contact {
+      padding-bottom: 12px;
+    }
+
+    .contact p {
+      max-width: 620px;
+      margin-bottom: 18px;
+      color: var(--muted);
     }
 
     .links {
@@ -127,38 +209,6 @@
 
     .links a {
       font-weight: 650;
-    }
-
-    section {
-      padding-block: 36px;
-      border-top: 1px solid var(--line);
-      scroll-margin-top: 24px;
-    }
-
-    h2 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-      letter-spacing: -0.01em;
-    }
-
-    section p {
-      max-width: 680px;
-      margin-bottom: 0;
-      color: var(--muted);
-    }
-
-    .focus-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 22px;
-    }
-
-    .focus-list p {
-      padding-top: 14px;
-      border-top: 2px solid var(--accent);
-      color: var(--ink);
-      font-weight: 600;
     }
 
     footer {
@@ -172,7 +222,7 @@
       margin: 0;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .page {
         width: min(var(--content-width), calc(100% - 36px));
       }
@@ -187,9 +237,21 @@
         gap: 16px;
       }
 
-      .focus-list {
+      .hero {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 30px;
+      }
+
+      .portrait {
+        width: clamp(112px, 34vw, 156px);
+        align-self: center;
+      }
+
+      .approach-list {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 18px;
       }
     }
 
@@ -206,42 +268,93 @@
       <a class="name" href="#top">Sebastian Brightly</a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#focus">Focus</a>
+        <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="page" id="top">
-    <div class="intro">
-      <p class="eyebrow">Cloud · Automation · Enterprise Operations</p>
-      <h1>Making complex technology work better for people.</h1>
-      <p class="summary">
-        I’m Sebastian, a technology leader with 8+ years of experience across
-        healthcare and technology. I turn complicated systems into reliable,
-        practical tools that make work easier.
-      </p>
-      <div class="links" id="contact">
-        <a href="mailto:brightly.inc@gmail.com">Email me</a>
-        <a href="https://www.linkedin.com/in/sebastian-brightly-08431a169">Connect on LinkedIn</a>
+    <section class="hero" aria-labelledby="intro-heading">
+      <div class="intro">
+        <p class="eyebrow">Cloud, automation, and the human side of systems</p>
+        <h1 id="intro-heading">I like making complicated things clearer.</h1>
+        <p class="summary">
+          I work with cloud platforms, automation, and technical environments
+          where many parts have to work together. What keeps me interested is
+          understanding the problem underneath, then making things more reliable
+          and easier for people to use and maintain.
+        </p>
       </div>
-    </div>
+      <figure class="portrait">
+        <img src="assets/SebastianBrightly1197.jpg" alt="Portrait of Sebastian Brightly">
+      </figure>
+    </section>
 
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">A little about me</h2>
       <p>
-        I’ve led teams and enterprise operations in environments where
-        reliability, compliance, and scale matter. I enjoy solving problems
-        creatively and building systems that help people do their best work.
+        My experience across healthcare and technology has shown me how much
+        people depend on systems working as they should. I enjoy figuring out
+        how those systems fit together, especially when they have become
+        complicated or unfamiliar. The right answer is not always the newest
+        tool; it is the one that addresses the real problem and remains clear
+        to the people who operate it.
+      </p>
+      <p>
+        I value working across teams, sharing what I learn, and taking
+        responsibility for the details that make a solution dependable. I want
+        to leave systems and processes in a better state, and make it easier for
+        the next person to understand and build on the work.
       </p>
     </section>
 
-    <section id="focus" aria-labelledby="focus-heading">
-      <h2 id="focus-heading">What I focus on</h2>
-      <div class="focus-list">
-        <p>Reliable cloud platforms</p>
-        <p>Useful automation</p>
-        <p>Practical systems design</p>
+    <section id="approach" aria-labelledby="approach-heading">
+      <h2 id="approach-heading">How I work through a problem</h2>
+      <div class="approach-list">
+        <article>
+          <h3>Understand it first</h3>
+          <p>
+            I try to learn what is happening, who it affects, and what
+            needs to improve before choosing a tool or approach.
+          </p>
+        </article>
+        <article>
+          <h3>Make it easier to live with</h3>
+          <p>
+            I look for solutions that are understandable, maintainable, and
+            suited to the problem—not just clever in the moment they are built.
+          </p>
+        </article>
+        <article>
+          <h3>Share the understanding</h3>
+          <p>
+            For me, good work includes context others can use: clear decisions,
+            useful documentation, and room for teammates to keep improving it.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="curiosity-heading">
+      <h2 id="curiosity-heading">Curiosity is part of the work</h2>
+      <p>
+        I like learning how things work—particularly when the answer is not
+        obvious. Exploring an unfamiliar system, testing an idea, and finding
+        out why something behaves as it does are part of what make this work
+        interesting to me.
+      </p>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">If something here resonates</h2>
+      <p>
+        I’m always glad to hear from someone who wants to compare notes, talk
+        through an interesting problem, or simply continue the conversation.
+      </p>
+      <div class="links">
+        <a href="mailto:brightly.inc@gmail.com">Email me</a>
+        <a href="https://www.linkedin.com/in/sebastian-brightly-08431a169">Connect on LinkedIn</a>
       </div>
     </section>
   </main>
