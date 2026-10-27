@@ -5,8 +5,13 @@ site with GitHub Pages.
 
 ## Site
 
-The entire site is `index.html`. It uses plain HTML and CSS, with no build
-tools or server-side dependencies. Image assets are stored in `assets/`.
+The site uses plain HTML and CSS, with no build tools or server-side
+dependencies:
+
+- `index.html`: main profile page
+- `contact.html`: web contact form (FormSubmit)
+- `thanks.html`: success page after form submission
+- `assets/`: local image assets
 
 ## Preview locally
 
@@ -57,5 +62,6 @@ is useful if you later publish from a branch instead. For
 `www.brightlyit.com`, use a CNAME DNS record pointing to
 `SebastianBrightly.github.io`.
 
-Update the profile, email address, and LinkedIn URL in `index.html` to keep
-the public contact details current.
+Update profile text and contact details in `index.html` and `contact.html` to
+keep the public information current. If you change the inbox destination, also
+update the FormSubmit endpoint (`form action`) in `contact.html`.
