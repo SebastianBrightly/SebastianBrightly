@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta name="description" content="Thank-you page after submitting the contact form.">
+  <link rel="canonical" href="https://brightlyit.com/thanks.html">
+  <title>Thanks for your message</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f7f4;
+      --ink: #182522;
+      --muted: #596762;
+      --accent: #176b58;
+      --line: #dce3de;
+      --content-width: 860px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.7 "Segoe UI", system-ui, sans-serif;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .page {
+      width: min(var(--content-width), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    header {
+      padding-block: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .name {
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    main {
+      padding-block: clamp(56px, 10vw, 100px) 72px;
+    }
+
+    h1,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      font-size: clamp(2rem, 6vw, 3.1rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      max-width: 620px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    footer {
+      padding-block: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(var(--content-width), calc(100% - 36px));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="page">
+      <a class="name" href="index.html">Sebastian Brightly</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Thanks for reaching out.</h1>
+    <p>
+      Your message has been sent successfully. I appreciate you taking the time
+      to get in touch.
+    </p>
+    <p>
+      <a href="index.html">Return to my profile</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="page">
+      <p>Sebastian Brightly</p>
+    </div>
+  </footer>
+</body>
+</html>
