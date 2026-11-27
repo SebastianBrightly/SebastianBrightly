@@ -47,3 +47,4 @@ __pycache__/
 *.temp
 ~$*
 agent-prompts/
+SITE_INSTRUCTIONS.md
